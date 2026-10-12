@@ -1,3 +1,4 @@
+
 def show_menu():
     print()
     print("========================")
@@ -10,9 +11,7 @@ def show_menu():
     print("5. Delete habit")
     print("6. Exit")
 
-    choice = input("Choose an option: ")
-
-    return choice
+    return input("Choose an option: ").strip()
 
 
 def show_habits(habits):
@@ -29,6 +28,7 @@ def show_habits(habits):
             ".",
             habit.name,
             "-",
-            habit.periodicity
+            habit.periodicity,
+            "- Created:",
+            habit.created_at,
         )
-        
